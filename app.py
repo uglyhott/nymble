@@ -1,6 +1,8 @@
 import requests
 import itertools
 
+# TODO: add logging
+
 API_URL = 'https://owlbot.info/api/v2/dictionary/'
 # user_in_string = input("Enter words separated by a space: ")
 
@@ -56,10 +58,12 @@ def dictionary_check(created_words):
 
 
 check1 = dictionary_check(single_sliced)
+# these two probably wont find any english words and will be empty dicts
 check2 = dictionary_check(double_sliced)
 check3 = dictionary_check(triple_sliced)
 print(check1)
 
 # TODO: review why these two print empty dictionaries.
+#  it is because there's no english words created
 print(check2)
 print(check3)
